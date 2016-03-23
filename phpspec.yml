@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: Prenatal
+        psr4_prefix: Prenatal
+        src_path: app

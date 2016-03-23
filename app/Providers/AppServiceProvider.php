@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Prenatal\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

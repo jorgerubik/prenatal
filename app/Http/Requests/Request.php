@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace Prenatal\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

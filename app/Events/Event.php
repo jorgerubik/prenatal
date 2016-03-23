@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Prenatal\Events;
 
 abstract class Event
 {
