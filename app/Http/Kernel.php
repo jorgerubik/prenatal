@@ -29,5 +29,6 @@ class Kernel extends HttpKernel
         'auth' => \Prenatal\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \Prenatal\Http\Middleware\RedirectIfAuthenticated::class,
+        'logUser' => \Prenatal\Http\Middleware\LogUser::class,
     ];
 }

@@ -11,9 +11,25 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/prueba', function () {
-    return view('pruebas/prueba');
-});
+/*
+|--------------------------------------------------------------------------
+| Routes Log
+|--------------------------------------------------------------------------
+*/
+Route::get('/', ['middleware'=>'logUser', function () {
+    return view('users.login');
+}]);
+Route::resource('log','LogController');
+Route::get('logout','LogController@logout');
+
+Route::get('password/email','Auth\PasswordController@getEmail');
+Route::post('password/email','Auth\PasswordController@postEmail');
+
+Route::get('password/reset/{token}','Auth\PasswordController@getReset');
+Route::post('password/reset','Auth\PasswordController@postReset');
+/*
+|--------------------------------------------------------------------------
+| Routes System
+|--------------------------------------------------------------------------
+*/
+Route::resource('index','FrontController');
